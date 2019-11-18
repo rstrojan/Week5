@@ -13,7 +13,6 @@ app.set('port', 34691);
 
 app.get('/',function(req,res){
   res.send('fuck you');
-
 });
 
 app.get('/show-data',function(req,res){
