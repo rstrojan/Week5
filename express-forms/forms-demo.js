@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 34691);
 
 app.get('/',function(req,res){
-  res.render('show-data');
+  res.render('show-data.handlebars');
 });
 
 app.get('/show-data',function(req,res){
