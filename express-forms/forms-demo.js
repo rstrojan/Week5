@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 34691);
 
 app.get('/',function(req,res){
-  res.render('show-data.handlebars');
+  res.render('show-data');
 });
 
 app.get('/show-data',function(req,res){
@@ -30,7 +30,7 @@ app.get('/get-loopback',function(req,res){
   qParams += '.';
   var context = {};
   context.dataList = qParams;
-  res.render('get-loopback', context);
+  res.render('get-loopback-improved', context);
 });
 
 app.get('/get-loopback-improved',function(req,res){
