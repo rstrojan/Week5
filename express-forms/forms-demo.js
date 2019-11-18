@@ -11,7 +11,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 34691);
 
-app.get('/',function(req,res){
+app.get('/get-loopback-improved',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
