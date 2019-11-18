@@ -43,14 +43,29 @@ app.get('/get-loopback-improved',function(req,res){
   res.render('get-loopback-improved', context);
 });
 
-app.get('/test',function(req,res){
+app.get('/suterr-returner',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
   }
   var context = {};
+  context.callType = 'GET';
   context.dataList = qParams;
-  res.render('get-loopback-improved', context);
+  res.render('suterr-returner', context);
+});
+
+
+app.post('/suterr-returner', function(req,res){
+  var qParams = [];
+  for (var p in req.body){
+    qParams.push({'name':p,'value':req.body[p]})
+  }
+  console.log(qParams);
+  console.log(req.body);
+  var context = {};
+  context.callType = 'POST';
+  context.dataList = qParams;
+  res.render('suterr-returner', context);
 });
 
 app.post('/post-loopback', function(req,res){
