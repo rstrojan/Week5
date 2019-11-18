@@ -11,10 +11,6 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 34691);
 
-app.get('/a',function(req,res){
-  res.render('home');
-});
-
 app.get('/',function(req,res){
   var qParams = [];
   for (var p in req.query){
