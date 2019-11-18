@@ -33,7 +33,7 @@ app.get('/get-loopback',function(req,res){
   res.render('get-loopback', context);
 });
 
-app.get('/suterr-returner',function(req,res){
+app.get('/get-loopback-improved',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
@@ -43,7 +43,7 @@ app.get('/suterr-returner',function(req,res){
   res.render('get-loopback-improved', context);
 });
 
-app.post('/suterr-returner', function(req,res){
+app.post('/post-loopback', function(req,res){
   var qParams = [];
   for (var p in req.body){
     qParams.push({'name':p,'value':req.body[p]})
