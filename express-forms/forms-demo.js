@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 34692);
+app.set('port', 34691);
 
 app.get('/',function(req,res){
   res.render('home');
