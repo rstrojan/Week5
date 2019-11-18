@@ -17,6 +17,7 @@ app.get('/',function(req,res){
     qParams.push({'name':p,'value':req.query[p]})
   }
   var context = {};
+  context.reqType = 'GET';
   context.dataList = qParams;
   res.render('get-loopback-improved', context);
 });
